@@ -1,0 +1,338 @@
+[
+  {
+    "index": 96,
+    "reference_smiles": "CC(Sc1ncc(C#N)c(N)n1)C(=O)Nc1ccccc1",
+    "initial_hv": 0.13309527038125865,
+    "final_hv": 0.16008420349403724,
+    "final_population_size": 125,
+    "archive_size": 125,
+    "is_success": true,
+    "success_count": 6,
+    "best_smiles": "O=C(N[C@H](C(=O)O)c1ccccc1)c1cc(-c2[nH]ncc2-c2cccc(Cl)c2)c[nH]1",
+    "best_metrics": {
+      "qed": 0.37272830058602213,
+      "sa": 0.7830409061926914,
+      "gsk3b": 0.2,
+      "jnk3": 1.0,
+      "similarity": 0.15294117647058825
+    },
+    "success_individuals": [
+      {
+        "qed": 0.7280260541504004,
+        "sa": 0.8839821706630612,
+        "gsk3b": 0.5,
+        "jnk3": 0.42,
+        "similarity": 0.2465753424657534,
+        "smiles": "O=C(Nc1ccccc1)Nc1nccc(-c2ccc(N3CCOCC3)cc2)n1"
+      },
+      {
+        "qed": 0.7500490576537316,
+        "sa": 0.9128458545017197,
+        "gsk3b": 0.82,
+        "jnk3": 0.72,
+        "similarity": 0.22857142857142856,
+        "smiles": "O=C(c1ccc(-c2ccnc(Nc3ccccc3)n2)cc1)N1CC1"
+      },
+      {
+        "qed": 0.7551029271800053,
+        "sa": 0.8756046406218965,
+        "gsk3b": 0.78,
+        "jnk3": 0.69,
+        "similarity": 0.22666666666666666,
+        "smiles": "O=C(Nc1ccc(-c2ccnc(Nc3ccccc3)n2)cn1)N1CCC1"
+      },
+      {
+        "qed": 0.7608123714236861,
+        "sa": 0.8630352626314658,
+        "gsk3b": 0.82,
+        "jnk3": 0.75,
+        "similarity": 0.2077922077922078,
+        "smiles": "O=C(c1ccc(Nc2nccc(-c3ccccc3)n2)cc1)N1CCNC1"
+      },
+      {
+        "qed": 0.7951343084613615,
+        "sa": 0.88478672015787,
+        "gsk3b": 0.77,
+        "jnk3": 0.57,
+        "similarity": 0.2328767123287671,
+        "smiles": "O=C(c1ccc(-c2ccnc(Nc3ccccc3)n2)nc1)N1CCC1"
+      },
+      {
+        "qed": 0.7848294543696114,
+        "sa": 0.8977581694543727,
+        "gsk3b": 0.81,
+        "jnk3": 0.76,
+        "similarity": 0.2191780821917808,
+        "smiles": "O=C(c1ccc(Nc2nccc(-c3ccccc3)n2)cc1)N1CCC1.O"
+      }
+    ],
+    "archive_file": "/home/gcb20242750/pythonwork/d/results_tfvae_r6/results_tfvae_r6_gskjnk/archives/archive_mol_96.txt",
+    "status": "completed"
+  },
+  {
+    "index": 97,
+    "reference_smiles": "COc1ccc(-c2nc(C#N)c(NCCCN(C)C)o2)cc1OC",
+    "initial_hv": 0.12960284313694265,
+    "final_hv": 0.163599588156975,
+    "final_population_size": 125,
+    "archive_size": 125,
+    "is_success": true,
+    "success_count": 5,
+    "best_smiles": "Cn1cc(-c2ccc3cnc(Nc4ccc(-n5cnc(N6CCOCC6)n5)cc4)nc3c2-c2cnn(C)c2)cn1",
+    "best_metrics": {
+      "qed": 0.34276175835072786,
+      "sa": 0.7628208626431816,
+      "gsk3b": 0.49,
+      "jnk3": 1.0,
+      "similarity": 0.09
+    },
+    "success_individuals": [
+      {
+        "qed": 0.7066003049890655,
+        "sa": 0.8279134666974008,
+        "gsk3b": 0.89,
+        "jnk3": 0.78,
+        "similarity": 0.23255813953488372,
+        "smiles": "CCOc1nc(NC(=O)Cc2cc(S(C)(=O)=O)ccc2OC)cc(N)c1C#N"
+      },
+      {
+        "qed": 0.7935040658533651,
+        "sa": 0.8539275331129635,
+        "gsk3b": 0.69,
+        "jnk3": 0.56,
+        "similarity": 0.2125,
+        "smiles": "COc1ccc(-c2ccnc(Nc3ccc(C#N)cc3F)n2)cn1"
+      },
+      {
+        "qed": 0.7180168354741251,
+        "sa": 0.8422307101250703,
+        "gsk3b": 0.93,
+        "jnk3": 0.43,
+        "similarity": 0.20512820512820512,
+        "smiles": "COc1ccc(Nc2nccc(-c3cccc(F)n3)n2)cc1N(C)C"
+      },
+      {
+        "qed": 0.789003033588773,
+        "sa": 0.882253508586765,
+        "gsk3b": 0.72,
+        "jnk3": 0.48,
+        "similarity": 0.22077922077922077,
+        "smiles": "COc1ccc(-c2ccnc(Nc3ccc(C#N)cc3F)n2)cc1"
+      },
+      {
+        "qed": 0.7575099007700948,
+        "sa": 0.8472567002538772,
+        "gsk3b": 0.85,
+        "jnk3": 0.54,
+        "similarity": 0.24675324675324675,
+        "smiles": "COc1ccc(-c2ccnc(Nc3ccc(OF)c(C#N)c3)n2)cc1"
+      }
+    ],
+    "archive_file": "/home/gcb20242750/pythonwork/d/results_tfvae_r6/results_tfvae_r6_gskjnk/archives/archive_mol_97.txt",
+    "status": "completed"
+  },
+  {
+    "index": 98,
+    "reference_smiles": "O=C(CSc1nnc(-c2ccncc2)[nH]1)NCCc1ccccc1",
+    "initial_hv": 0.09816932179793328,
+    "final_hv": 0.13784675934539295,
+    "final_population_size": 125,
+    "archive_size": 125,
+    "is_success": true,
+    "success_count": 1,
+    "best_smiles": "CCC(N)(C#Cc1cnc(N)c2c(-c3ccc(NC(=O)Nc4cccc(C)c4)cc3)csc12)CC",
+    "best_metrics": {
+      "qed": 0.24757136474048366,
+      "sa": 0.7793245446939596,
+      "gsk3b": 1.0,
+      "jnk3": 0.38,
+      "similarity": 0.1276595744680851
+    },
+    "success_individuals": [
+      {
+        "qed": 0.8329473503005833,
+        "sa": 0.8820272003083143,
+        "gsk3b": 0.61,
+        "jnk3": 0.58,
+        "similarity": 0.2,
+        "smiles": "c1ccc(-c2ccnc(N[C@H]3CNC3)n2)cc1"
+      }
+    ],
+    "archive_file": "/home/gcb20242750/pythonwork/d/results_tfvae_r6/results_tfvae_r6_gskjnk/archives/archive_mol_98.txt",
+    "status": "completed"
+  },
+  {
+    "index": 99,
+    "reference_smiles": "Nc1nc(N)nc(-c2ccccn2)n1",
+    "initial_hv": 0.11284197523556401,
+    "final_hv": 0.20168453672332082,
+    "final_population_size": 125,
+    "archive_size": 125,
+    "is_success": true,
+    "success_count": 19,
+    "best_smiles": "CNCC#Cc1cnc(N)c2c(-c3ccc(NC(=O)Nc4cccc(C)c4)cc3)csc12",
+    "best_metrics": {
+      "qed": 0.3328612487471994,
+      "sa": 0.8140490668984077,
+      "gsk3b": 1.0,
+      "jnk3": 0.42,
+      "similarity": 0.12162162162162163
+    },
+    "success_individuals": [
+      {
+        "qed": 0.7474379789689158,
+        "sa": 0.8320370415091638,
+        "gsk3b": 0.73,
+        "jnk3": 0.55,
+        "similarity": 0.32608695652173914,
+        "smiles": "O=C([S-])c1ccc(Nc2nccc(-c3ccccn3)n2)cc1"
+      },
+      {
+        "qed": 0.7714418141808377,
+        "sa": 0.8331045421762435,
+        "gsk3b": 0.7,
+        "jnk3": 0.52,
+        "similarity": 0.2978723404255319,
+        "smiles": "OC(C)c1ccc(Nc2nccc(-c3ccccn3)n2)cc1"
+      },
+      {
+        "qed": 0.7833048986491562,
+        "sa": 0.8993093415811629,
+        "gsk3b": 0.61,
+        "jnk3": 0.48,
+        "similarity": 0.26666666666666666,
+        "smiles": "Cc1ccc(-c2ccnc(Nc3ccccn3)n2)cc1"
+      },
+      {
+        "qed": 0.7479303874624663,
+        "sa": 0.8932313166570928,
+        "gsk3b": 0.78,
+        "jnk3": 0.58,
+        "similarity": 0.30434782608695654,
+        "smiles": "c1ccc(-c2ccnc(Nc3ccc(N4CC4)cc3)n2)nc1"
+      },
+      {
+        "qed": 0.7594427094384202,
+        "sa": 0.884728116027056,
+        "gsk3b": 0.44,
+        "jnk3": 0.66,
+        "similarity": 0.29545454545454547,
+        "smiles": "c1ccc(Nc2nccc(-c3ccnc(N)n3)c2)cc1"
+      },
+      {
+        "qed": 0.7931604228731318,
+        "sa": 0.8965830220473767,
+        "gsk3b": 0.89,
+        "jnk3": 0.4,
+        "similarity": 0.2916666666666667,
+        "smiles": "COc1cccc(Nc2nccc(-c3ccccn3)n2)c1"
+      },
+      {
+        "qed": 0.7430596645828076,
+        "sa": 0.9159759320417084,
+        "gsk3b": 0.82,
+        "jnk3": 0.73,
+        "similarity": 0.20408163265306123,
+        "smiles": "c1ccc(-c2ccnc(Nc3ccc(N4CC4)cc3)n2)cc1"
+      },
+      {
+        "qed": 0.7854290999210233,
+        "sa": 0.9258204910300071,
+        "gsk3b": 0.83,
+        "jnk3": 0.68,
+        "similarity": 0.20833333333333334,
+        "smiles": "COc1ccc(-c2ccnc(Nc3ccccc3)n2)cc1"
+      },
+      {
+        "qed": 0.7221127581966386,
+        "sa": 0.87488146406015,
+        "gsk3b": 0.83,
+        "jnk3": 0.43,
+        "similarity": 0.2916666666666667,
+        "smiles": "Oc1ccc(Nc2nccc(-c3ccccn3)n2)cc1F"
+      },
+      {
+        "qed": 0.7626630429862935,
+        "sa": 0.9343604637649321,
+        "gsk3b": 0.87,
+        "jnk3": 0.7,
+        "similarity": 0.25,
+        "smiles": "c1ccc(-c2ccnc(Nc3ccccc3)n2)cc1"
+      },
+      {
+        "qed": 0.9069552776062928,
+        "sa": 0.790520359579982,
+        "gsk3b": 0.81,
+        "jnk3": 0.47,
+        "similarity": 0.2037037037037037,
+        "smiles": "Cc1cccc(-c2ccnc(Nc3ccccc3)n2)n[nH]1.O"
+      },
+      {
+        "qed": 0.7971689529173865,
+        "sa": 0.8515961414370066,
+        "gsk3b": 0.76,
+        "jnk3": 0.66,
+        "similarity": 0.2641509433962264,
+        "smiles": "c1ccc(-c2ccnc(Nc3ccc(N4CCOC4)cc3)n2)nc1"
+      },
+      {
+        "qed": 0.7931604228731318,
+        "sa": 0.8880147838339774,
+        "gsk3b": 0.9,
+        "jnk3": 0.46,
+        "similarity": 0.23404255319148937,
+        "smiles": "COc1cccc(-c2ccnc(Nc3ccccc3)n2)n1"
+      },
+      {
+        "qed": 0.7832680725947353,
+        "sa": 0.882842055838259,
+        "gsk3b": 0.63,
+        "jnk3": 0.5,
+        "similarity": 0.23636363636363636,
+        "smiles": "O=C(c1ccc(-c2ccnc(Nc3ccccn3)n2)cc1)N1CCCC1"
+      },
+      {
+        "qed": 0.7216354729204081,
+        "sa": 0.8278756960223974,
+        "gsk3b": 0.8,
+        "jnk3": 0.79,
+        "similarity": 0.2,
+        "smiles": "O=S(O)c1ccc(Nc2nccc(-c3ccccc3)n2)cc1"
+      },
+      {
+        "qed": 0.7833048986491562,
+        "sa": 0.8996206844755569,
+        "gsk3b": 0.86,
+        "jnk3": 0.69,
+        "similarity": 0.20833333333333334,
+        "smiles": "Cc1ccc(-c2ccnc(Nc3ccccc3)n2)cn1"
+      },
+      {
+        "qed": 0.7664262030348343,
+        "sa": 0.8725060079861693,
+        "gsk3b": 0.76,
+        "jnk3": 0.67,
+        "similarity": 0.2553191489361702,
+        "smiles": "Nc1ccc(Nc2nccc(-c3ccccc3)n2)cn1.[O-]"
+      },
+      {
+        "qed": 0.7612079968535894,
+        "sa": 0.9191826140713846,
+        "gsk3b": 0.79,
+        "jnk3": 0.75,
+        "similarity": 0.2222222222222222,
+        "smiles": "c1ccc(-c2ccnc(Nc3ccc(Br)cc3)n2)cc1"
+      },
+      {
+        "qed": 0.7605774447971387,
+        "sa": 0.8881758344103675,
+        "gsk3b": 0.56,
+        "jnk3": 0.55,
+        "similarity": 0.26666666666666666,
+        "smiles": "Oc1ccc(-c2ccnc(Nc3ccccn3)n2)cc1"
+      }
+    ],
+    "archive_file": "/home/gcb20242750/pythonwork/d/results_tfvae_r6/results_tfvae_r6_gskjnk/archives/archive_mol_99.txt",
+    "status": "completed"
+  }
+]
