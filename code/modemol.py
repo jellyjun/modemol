@@ -1,5 +1,4 @@
 import copy
-import math
 import os
 import sys
 from itertools import combinations
@@ -233,21 +232,14 @@ def cosine_distance(x: np.ndarray, y: np.ndarray) -> np.ndarray:
     return 1 - cosine_sim
 
 
-def tchebycheff_distance(
+def scalarized_fitness(
     objectives: np.ndarray,
     weight: np.ndarray,
     z_star: np.ndarray,
-    use_pbi: bool = True,
-    theta: float = 5.0,
+    maximize: bool = True,
 ) -> float:
-    if not use_pbi:
-        diff = np.abs(objectives - z_star)
-        return np.max(weight * diff)
-    d = objectives - z_star
-    w_norm = weight / (np.linalg.norm(weight) + 1e-10)
-    d1 = np.dot(d, w_norm)
-    d2 = np.linalg.norm(d - d1 * w_norm)
-    return -d1 + theta * d2
+    diff = z_star - objectives if maximize else objectives - z_star
+    return float(np.dot(diff, weight))
 
 
 def is_dominated(obj1: np.ndarray, obj2: np.ndarray, maximize: bool = True) -> bool:
@@ -474,6 +466,8 @@ def modemol_algorithm(
     resource_interval: int = 20,
     n_active: int = 100,
     epsilon: float = 1e-4,
+    lambda_max: float = 2.0,
+    gamma: float = 1.0,
 ) -> Dict:
     if objectives_list is None:
         objectives_list = ["qed", "sa", "jnk3", "similarity"]
@@ -624,27 +618,21 @@ def modemol_algorithm(
 
             for cand_w_idx in update_candidates:
                 cand_weight = weights[cand_w_idx]
-                old_pbi = tchebycheff_distance(
+                old_scalar = scalarized_fitness(
                     objectives[cand_w_idx],
                     cand_weight,
                     z_star,
-                    use_pbi=True,
-                    theta=0,
+                    maximize,
                 )
-                new_pbi = tchebycheff_distance(
+                new_scalar = scalarized_fitness(
                     new_objectives,
                     cand_weight,
                     z_star,
-                    use_pbi=True,
-                    theta=0,
+                    maximize,
                 )
 
                 if use_div:
-                    alpha_max = 2.0
-                    k_steepness = 10.0
-                    exponent = -(k_steepness / Genmax) * (gen - Genmax / 2.0)
-                    exponent = max(-50, min(50, exponent))
-                    alpha_iter = alpha_max / (1.0 + math.exp(exponent))
+                    lambda_iter = lambda_max * (((gen + 1) / Genmax) ** gamma)
                     S_j_indices = neighbors[cand_w_idx]
                     fp_old = population_fps[cand_w_idx]
                     max_sim_new = 0.0
@@ -660,11 +648,11 @@ def modemol_algorithm(
                                     sim_old = DataStructs.TanimotoSimilarity(fp_old, fp_n)
                                     if sim_old > max_sim_old:
                                         max_sim_old = sim_old
-                    old_dist = old_pbi + alpha_iter * max_sim_old
-                    new_dist = new_pbi + alpha_iter * max_sim_new
+                    old_dist = old_scalar + lambda_iter * max_sim_old
+                    new_dist = new_scalar + lambda_iter * max_sim_new
                 else:
-                    old_dist = old_pbi
-                    new_dist = new_pbi
+                    old_dist = old_scalar
+                    new_dist = new_scalar
 
                 if new_dist < old_dist:
                     population[cand_w_idx] = new_individual.copy()
@@ -798,6 +786,8 @@ def optimize_single_molecule(reference_smiles: str, config: Dict, seed: Optional
         delta_min=delta_min,
         use_div=config.get("use_div", True),
         use_archieve=config.get("use_archieve", True),
+        lambda_max=config.get("lambda_max", 2.0),
+        gamma=config.get("gamma", 1.0),
     )
 
     archive_smiles = decode_molecules(result["archive_population"]) if len(result["archive_population"]) else []
@@ -831,7 +821,7 @@ if __name__ == "__main__":
         "objectives_list": ["qed", "sa", "gsk3b", "sim"],
         "pc": 1.0,
         "pm": 0.5,
-        "d": 0.25,
+        "d": 0.5,
         "sigma": 0.5,
         "delta": 0.9,
         "z_star_fix_ratio": 1.0,
@@ -844,6 +834,8 @@ if __name__ == "__main__":
         "tfvae_high_quality_data": TFVAE_HIGH_QUALITY_DATA,
         "use_div": True,
         "use_archieve": False,
+        "lambda_max": 2.0,
+        "gamma": 1.0,
     }
 
     data_file = os.path.join(current_dir, config["data_file"])
